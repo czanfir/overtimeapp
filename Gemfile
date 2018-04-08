@@ -57,3 +57,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'bootstrap', '~> 4.0'
+gem 'jquery-rails'
+
+gem 'factory_bot', '~> 4.8', '>= 4.8.2'
