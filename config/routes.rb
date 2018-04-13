@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   resources :posts
   devise_for :users, skip: [:registrations]
-  root to: 'static#homepage'
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 end
