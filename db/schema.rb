@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180413135344) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.integer "status", default: 0
+    t.text "status", default: "submitted"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

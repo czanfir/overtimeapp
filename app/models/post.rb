@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  enum status: { submitted: 0, approved: 1, rejected: 2 }
+  enum status: { submitted: 'submitted', approved: 'approved', rejected: 'rejected' }
   validates_presence_of :date, :rationale
   belongs_to :user
 end
