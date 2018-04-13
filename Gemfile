@@ -61,3 +61,5 @@ gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails'
 
 gem 'factory_bot', '~> 4.8', '>= 4.8.2'
+
+gem 'gritter', '~> 1.2'
