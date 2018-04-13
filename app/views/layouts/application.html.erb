@@ -14,5 +14,7 @@
       <%= yield %>
     </main>
     <%= js add_gritter(flash[:notice], title: "Overtime App Notification", sticky: false) %>
+    <%= js add_gritter(flash[:error], title: "Overtime App Notification", sticky: false) %>
+    <%= js add_gritter(flash[:alert], title: "Overtime App Notification", sticky: false) %>
   </body>
 </html>

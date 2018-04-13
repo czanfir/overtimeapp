@@ -2,9 +2,6 @@
   <div class="col-md-4 offset-md-4">
     <h2 class="log-in-title">Log in</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-horizontal") do |f| %>
-      <% flash.each do |key, value| %>
-        <%= js add_gritter(value, title: "Overtime App Notification", sticky: false) %>
-      <% end %>
 
       <div class="form-group">
         <%= f.label :email %><br />
