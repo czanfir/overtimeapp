@@ -13,11 +13,9 @@
     <th></th>
   </tr>
   </thead>
-  <tbody>
+  <tbody id="posts">
   <%= render @posts %>
   </tbody>
 </table>
 
-<div class="pagination justify-content-center" >
-  <%= paginate @posts %>
-</div>
+<%= render 'shared/pagination', object_to_paginate: @posts %>
