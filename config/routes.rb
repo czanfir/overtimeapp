@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :audit_logs
   namespace :admin do
     resources :users
     resources :posts
@@ -9,6 +8,8 @@ Rails.application.routes.draw do
   end
 
   resources :posts
+  resources :audit_logs, except: [:new, :edit, :destory]
+
   devise_for :users, skip: [:registrations]
   devise_scope :user do
     authenticated :user do
