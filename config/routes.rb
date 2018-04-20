@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   end
 
   resources :posts
+  resources :audit_logs, except: [:new, :edit, :destory]
+
   devise_for :users, skip: [:registrations]
   devise_scope :user do
     authenticated :user do
-      root 'posts#index'
+      root 'static#homepage'
     end
 
     unauthenticated do
