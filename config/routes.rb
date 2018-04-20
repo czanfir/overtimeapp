@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   devise_for :users, skip: [:registrations]
   devise_scope :user do
     authenticated :user do
-      root 'posts#index'
+      root 'static#homepage'
     end
 
     unauthenticated do
