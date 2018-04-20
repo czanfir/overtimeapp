@@ -18,13 +18,15 @@
           <%= link_to "Audit Log", audit_logs_path, class: "nav-link" %>
         </li>
         <li class="nav-item <%= active?(new_post_path) %>">
-          <%= link_to "Add New Entry", new_post_path, class: "nav-link", id: 'new_post_from_nav' %>
+          <%= link_to "Request Overtime", new_post_path, class: "nav-link", id: 'new_post_from_nav' %>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Account
+            <%=current_user.full_name%>
+            <br>
+            <%= current_user.user_type%>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="right: 0; left: auto;">
             <% if admin_user? %>
