@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     root to: "users#index"
   end
 
-  resources :posts
+  resources :posts do
+    member do
+      get :approve
+    end
+  end
   resources :audit_logs, except: [:new, :edit, :destory]
 
   devise_for :users, skip: [:registrations]
