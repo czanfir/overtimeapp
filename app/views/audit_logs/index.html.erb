@@ -1,5 +1,5 @@
-<h1>Audit Log Dashboard</h1>
-
+<h1 class="text-center">Audit Log Dashboard</h1>
+<br>
 <table class="table table-striped table-hover">
   <thead>
   <tr>
@@ -14,3 +14,7 @@
   <%= render @audit_logs %>
   </tbody>
 </table>
+
+<div class="pagination justify-content-center" >
+  <%= paginate @audit_logs %>
+</div>
