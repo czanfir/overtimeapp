@@ -11,15 +11,8 @@
         <li class="nav-item <%= active?(root_path) %>">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item <%= active?(posts_path) %>">
-          <%= link_to "Time Entries", posts_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item <%= active?(audit_logs_path) %>">
-          <%= link_to "Audit Log", audit_logs_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item <%= active?(new_post_path) %>">
-          <%= link_to "Request Overtime", new_post_path, class: "nav-link", id: 'new_post_from_nav' %>
-        </li>
+        <%= render 'shared/employee_nav_items' if employee? %>
+        <%= render 'shared/audit_log_tab' if admin? %>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
@@ -29,10 +22,8 @@
             <%= current_user.user_type%>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="right: 0; left: auto;">
-            <% if admin_user? %>
-              <%= link_to "Admin Dashboard", admin_root_path, class: "dropdown-item" %>
-              <div class="dropdown-divider"></div>
-            <% end %>
+            <%= render 'shared/admin_dropdown' if admin? %>
+
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

@@ -8,7 +8,11 @@ module ApplicationHelper
     "active" if current_page?(path)
   end
 
-  def admin_user?
+  def employee?
+    current_user.type == 'Employee'
+  end
+
+  def admin?
     current_user.type == 'AdminUser'
   end
 
