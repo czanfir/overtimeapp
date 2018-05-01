@@ -7,12 +7,12 @@
 
 puts "1 employee created"
 
-AdminUser.create(email: "admin@test.com",
+AdminUser.create(email: "zanfircristian92@gmail.com",
                  password: "testtest",
                  password_confirmation: "testtest",
                  first_name: "Admin",
                  last_name: "Name",
-                 phone: "4322386131")
+                 phone: "0723362641")
 
 puts "1 Admin User created"
 
